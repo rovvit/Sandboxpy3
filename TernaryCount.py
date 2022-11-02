@@ -6,13 +6,9 @@ for _ in range (num):
 n = 0
 while n < 3**num-1:
     print(trenary)
-    trenary[0] += 1
-    for i in range(num):
+    trenary[0] += 1             # инкремент
+    for i in range(num):        # проверка на перенос единицы в следующий разряд
         if trenary[i] > 1:
             trenary[i] = -1
             trenary[i+1] += 1
     n+=1
-
-
-
-print(trenary)
