@@ -41,8 +41,8 @@ with cairo.SVGSurface("clock.svg", canvas_size, canvas_size) as surface:
     # Часовые метки (деления)
     for i in range(12):
         angle = 2 * math.pi * (i / 12)
-        outer_x = center + radius * math.sin(angle)
-        outer_y = center - radius * math.cos(angle)
+        outer_x = center + radius * 0.96 * math.sin(angle)
+        outer_y = center - radius * 0.96 * math.cos(angle)
         inner_x = center + radius * 0.75 * math.sin(angle)
         inner_y = center - radius * 0.75 * math.cos(angle)
 
